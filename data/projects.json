@@ -1,0 +1,68 @@
+[
+    {
+        "title": "re:Encrypt",
+        "description": "re:Encrypt is a password manager application that encrypts your usernames and passwords on your own machine using a password that you define. It stores them in an easy to transfer file, and can be loaded on any machine.",
+        "technologies": [
+            "React JS",
+            "Redux",
+            "Electron",
+            "Node JS"
+        ],
+        "links": [
+            {
+                "url": "https://github.com/heffayXD",
+                "title": "Github",
+                "icon": "fab fa-github"
+            },
+            {
+                "url": "#",
+                "title": "Windows Download",
+                "icon": "fab fa-windows"
+            }
+        ],
+        "image": "/static/images/reencrypt.jpg"
+    },
+    {
+        "title": "TrackPad",
+        "description": "TrackPad allows you to connect to a computer on your local network using your phone to control the mouse and type on the keyboard. This is done by starting up the application on your computer, then connecting through the mobile application.",
+        "technologies": [
+            "React Native",
+            "React JS",
+            "Electron",
+            "Node JS"
+        ],
+        "links": [
+            {
+                "url": "https://github.com/heffayXD",
+                "title": "Github",
+                "icon": "fab fa-github"
+            },
+            {
+                "url": "#",
+                "title": "Windows Download",
+                "icon": "fab fa-windows"
+            },
+            {
+                "url": "#",
+                "title": "Android SDK Download",
+                "icon": "fab fa-android"
+            }
+        ],
+        "image": "/static/images/reencrypt.jpg"
+    },
+    {
+        "title": "React Picture Crop",
+        "description": "A React component library that allows a user to resize an uploaded picture to your specifications. This component handles the upload, resizing, magnification, and base 64 encoding of the result for you.",
+        "technologies": [
+            "React JS"
+        ],
+        "links": [
+            {
+                "url": "https://github.com/heffayXD",
+                "title": "Github",
+                "icon": "fab fa-github"
+            }
+        ],
+        "image": "/static/images/reencrypt.jpg"
+    }
+]

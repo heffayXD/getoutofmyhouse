@@ -4,8 +4,8 @@ import Nav from './Nav'
 const Header = () => {
   return (
     <header>
-      <Link href="/">
-        <a className="title">GetOutOfMyHouse</a>
+      <Link href='/'>
+        <a className='title'>GetOutOfMyHouse</a>
       </Link>
       <Nav />
     </header>

@@ -26,8 +26,9 @@ export const useCommands = () => {
           '',
           'cls | - | Clears the screen',
           'commands | - | Displays available commands',
-          'github | - | Opens github',
-          'projects | - | Returns list of Project IDs'
+          'projects | - | Returns list of Project IDs',
+          'github | - | Opens github (use "github [project_id]" to specify project)',
+          'techs | - | Returns list of techs (use "techs [project_id]" to specify project)'
         ], currentIndex)
       case 'github': {
         const win = window.open('https://github.com/heffayXD', '_blank')
@@ -45,6 +46,20 @@ export const useCommands = () => {
           'picture_crop | - | React component for cropping profile pictures client side',
           '',
           'Use "[project_id] github" to link to github.'
+        ], currentIndex)
+      case 'techs':
+        return parseRows([
+          '-- TECHS --',
+          '',
+          'Express | - | Javascript server backend framework',
+          'PostgreSQL | - | Database language',
+          'Sequelize JS | - | Javascript ORM',
+          'GraphQL | - | API interface language',
+          'Electron | - | Javascript desktop application framework',
+          'React Native | - | Javascript mobile application framework',
+          'React JS | - | Client side frontend framework',
+          'Vue JS | - | Client side frontend framework',
+          'Laravel | - | PHP server backend framework'
         ], currentIndex)
       default:
         return parseRows([

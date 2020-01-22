@@ -1,0 +1,45 @@
+#projects {
+  .project-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    
+    .project-content {
+      padding: 20px;
+      margin: 10px;
+      .project-title {
+        margin-bottom: 20px;
+      }
+      .techs-title {
+        margin-top: 20px;
+      }
+      @include media(desktop) {
+        box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+        border-radius: 12px;
+        border: 1px solid #eee;
+        width: 25%;
+        padding: 40px;
+      }
+    }
+    .image-container {
+      text-align: center;
+      padding: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+      @include media(desktop) {
+        width: auto;
+      }
+    }
+    @include media(desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ import '../styles/index.scss'
 const Layout = props => {
   return (
     <div>
-      <HeadComponent title={ props.title || 'GetOutOfMyHouse' } />
+      <HeadComponent title={props.title || 'GetOutOfMyHouse'} />
       <Header />
       <main>
         {props.children}

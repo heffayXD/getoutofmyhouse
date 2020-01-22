@@ -8,6 +8,7 @@
 @import './components/experience';
 @import './components/command-prompt';
 @import './components/code-block';
+@import './components/projects';
 
 .row {
   padding-top: 40px;
@@ -49,24 +50,38 @@
   }
 }
 
-.icon-container {
-  margin-top: 20px;
-}
 
 .icon-link {
-  color: #fff;
-  margin: 6px;
+  color: #111;
+  margin: 10px;
   margin-top: 20px;
   font-size: 32px;
   &:hover {
     cursor: pointer;
-    color: #fff;
+    color: #111;
   }
   &:vistied {
-    color: #fff;
+    color: #111;
   }
   &:active {
-    color: #fff;
+    color: #111;
   }
+}
 
+.icon-container {
+  margin-top: 20px;
+  &.alt {
+    .icon-link {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+      &:vistied {
+        color: #fff;
+      }
+      &:active {
+        color: #fff;
+      }
+    }
+  }
 }

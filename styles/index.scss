@@ -1,13 +1,13 @@
-@import 'variables.scss';
-@import 'reset.scss';
-@import 'forms.scss';
+@import 'variables';
+@import 'reset';
+@import 'forms';
 
-@import './components/header.scss';
-@import './components/footer.scss';
-@import './components/hero.scss';
-@import './components/experience.scss';
-@import './components/command-prompt.scss';
-@import './components/code-block.scss';
+@import './components/header';
+@import './components/footer';
+@import './components/hero';
+@import './components/experience';
+@import './components/command-prompt';
+@import './components/code-block';
 
 .row {
   padding-top: 40px;

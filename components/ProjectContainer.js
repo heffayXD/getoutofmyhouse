@@ -21,6 +21,7 @@ const ProjectContainer = props => {
         target='_blank'
         rel='noopener noreferrer'
         title={link.title}
+        download={link.download}
       >
         <i className={link.icon} />
       </a>

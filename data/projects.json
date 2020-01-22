@@ -12,12 +12,14 @@
             {
                 "url": "https://github.com/heffayXD",
                 "title": "Github",
-                "icon": "fab fa-github"
+                "icon": "fab fa-github",
+                "download": false
             },
             {
-                "url": "#",
+                "url": "/static/downloads/reEncrypt-Setup-0.1.0.exe",
                 "title": "Windows Download",
-                "icon": "fab fa-windows"
+                "icon": "fab fa-windows",
+                "download": true
             }
         ],
         "image": "/static/images/reencrypt.jpg"
@@ -35,17 +37,20 @@
             {
                 "url": "https://github.com/heffayXD",
                 "title": "Github",
-                "icon": "fab fa-github"
+                "icon": "fab fa-github",
+                "download": false
             },
             {
                 "url": "#",
                 "title": "Windows Download",
-                "icon": "fab fa-windows"
+                "icon": "fab fa-windows",
+                "download": true
             },
             {
                 "url": "#",
                 "title": "Android SDK Download",
-                "icon": "fab fa-android"
+                "icon": "fab fa-android",
+                "download": true
             }
         ],
         "image": "/static/images/reencrypt.jpg"
@@ -60,7 +65,8 @@
             {
                 "url": "https://github.com/heffayXD",
                 "title": "Github",
-                "icon": "fab fa-github"
+                "icon": "fab fa-github",
+                "download": false
             }
         ],
         "image": "/static/images/reencrypt.jpg"

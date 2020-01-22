@@ -1,0 +1,21 @@
+/* Reset */
+body, header, footer, main, nav, div, ul, li, h1, h2, h3, h4, h5, p {
+  padding: 0px;
+  margin: 0px;
+}
+
+p, li, div, input, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  min-height: 100vh;
+}

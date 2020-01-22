@@ -1,0 +1,37 @@
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.6);
+  z-index: 2;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    &.title {
+      margin: 20px;
+      font-size: 24px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+  nav {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      text-align: right;
+      align-items: center;
+      li {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

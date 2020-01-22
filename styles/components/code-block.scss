@@ -1,0 +1,29 @@
+#code-block {
+  opacity: 0.3;
+  color: rgb(0, 255, 0);
+  text-align: left;
+  word-break: break-all;
+  font-size: 18px;
+  filter: blur(1.5px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .fn {
+    color: rgb(180, 0, 180);
+  }
+  .null {
+    color: rgb(0, 180, 255);
+  }
+  .var {
+    color: rgb(0, 180, 255);
+  }
+  .object {
+    color: rgb(255, 255, 0);
+  }
+  .e {
+    color: rgb(140, 140, 140);
+  }
+}

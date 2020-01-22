@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Javascript",
+        "filters": [ "frontend", "backend", "mobile", "languages" ] 
+    },
+    {
+        "title": "PHP", 
+        "filters": [ "backend", "languages" ]
+    },
+    {
+        "title": "C#", 
+        "filters": [ "backend", "languages" ]
+    },
+    {
+        "title": "SASS / CSS3", 
+        "filters": [ "frontend", "languages" ]
+    },
+    {
+        "title": "React", 
+        "filters": [ "frontend", "frameworks" ]
+    },
+    {
+        "title": "Vue.js", 
+        "filters": [ "frontend", "frameworks" ]
+    },
+    {
+        "title": "Laravel", 
+        "filters": [ "backend", "frameworks" ]
+    },
+    {
+        "title": "Node.js", 
+        "filters": [ "backend", "frameworks" ]
+    },
+    {
+        "title": "Next.js", 
+        "filters": [ "backend", "frameworks" ]
+    },
+    {
+        "title": "React Native", 
+        "filters": [ "mobile", "frameworks" ]
+    },
+    {
+        "title": "ASP.NET", 
+        "filters": [ "backend", "frameworks" ]
+    }
+]

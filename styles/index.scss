@@ -1,0 +1,72 @@
+@import 'variables.scss';
+@import 'reset.scss';
+@import 'forms.scss';
+
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/hero.scss';
+@import './components/experience.scss';
+@import './components/command-prompt.scss';
+@import './components/code-block.scss';
+
+.row {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  .title {
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $white;
+    color: $dark;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    @include media(tablet) {
+      margin: 20px;
+    }
+  }
+  &.alt {
+    color: $white;
+    background-color: $dark;
+  }
+}
+
+.icon-container {
+  margin-top: 20px;
+}
+
+.icon-link {
+  color: #fff;
+  margin: 6px;
+  margin-top: 20px;
+  font-size: 32px;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+  &:vistied {
+    color: #fff;
+  }
+  &:active {
+    color: #fff;
+  }
+
+}

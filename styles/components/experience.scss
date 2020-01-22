@@ -1,0 +1,86 @@
+#experience {
+  position: relative;
+  overflow: hidden;
+  .disclaimer {
+    text-align: center;
+    width: 100%;
+  }
+  ul.topics {
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .topic {
+      margin: 10px;
+      margin-top: 20px;
+      background-color: #fff;
+      color: #111;
+      padding: 10px;
+      width: 200px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+      ul.topic-list {
+        text-align: left;
+        padding-left: 26px;
+        li {
+          font-size: 22px;
+          position: relative;
+          &:before {
+            font-size: 18px;
+            top: 2px;
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            position: absolute;
+            left: -24px;
+          }
+        }
+      }
+    }
+    
+  }
+  #icons {
+    position: absolute;
+    width: 500%;
+    top: 40px;
+    width: 500%;
+    opacity: 0.2;
+    white-space: nowrap;
+    animation: icon-scroll 16s linear infinite;
+    display: flex;
+    justify-content: space-around;
+    @include media(tablet) {
+      width: 200%;
+      animation: icon-scroll 12s linear infinite;
+    }
+    i {
+      font-size: 46px;
+    }
+  }
+}
+
+@keyframes icon-scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -250%;
+  }
+}
+@include media(tablet) {
+  @keyframes icon-scroll {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+}

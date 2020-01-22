@@ -1,0 +1,78 @@
+#hero {
+  min-height: 100vh;
+  font-weight: 600;
+  text-align: center;
+  background: black;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media(tablet) {
+    min-height: 100vh;
+  } 
+  @include media(desktop) {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    .hero-content {
+      margin-right: 100px;
+    }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    @include media(tablet) {
+      font-size: 28px;
+      padding-top: 160px;
+    } 
+    @include media(desktop) {
+      z-index: 2;
+      position: relative;
+      font-size: 32px;
+      position: relative;
+      text-align: right;
+      width: auto;
+    }
+  }
+  .hero-background {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    .block-1 {
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border: none;
+      width: 0;
+      height: 0;
+      border-left: 0px solid transparent;
+      border-right: 50vw solid transparent;
+      border-bottom: 50vh solid #010101;
+      z-index: 1;
+    }
+    .block-2 {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      width: 0;
+      height: 0;
+      border-right: 0px solid transparent;
+      border-left: 50vw solid transparent;
+      border-top: 50vh solid #010101;
+      z-index: 1;
+    }
+    @include media(desktop) {
+      .block-1, .block-2 {
+        display: block;
+      }
+    }
+  }
+}

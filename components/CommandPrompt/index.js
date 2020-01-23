@@ -12,9 +12,9 @@ const CommandPrompt = () => {
     (<tr key={1}><th colSpan='3'>-- COMMANDS --</th></tr>),
     (<tr key={2}><td colSpan='3'>&nbsp;</td></tr>),
     (<tr key={3}><td>cls&nbsp;</td><td> - </td><td>Clears the screen</td></tr>),
-    (<tr key={4}><td>commands&nbsp;</td><td> - </td><td>Displays available commands</td></tr>),
-    (<tr key={5}><td>github&nbsp;</td><td> - </td><td>Opens github</td></tr>),
-    (<tr key={6}><td>projects&nbsp;</td><td> - </td><td>Returns list of Project IDs</td></tr>),
+    (<tr key={4}><td>help&nbsp;</td><td> - </td><td>Displays available commands</td></tr>),
+    (<tr key={5}><td>projects&nbsp;</td><td> - </td><td>Returns list of Project IDs</td></tr>),
+    (<tr key={6}><td>github&nbsp;</td><td> - </td><td>Opens github (use "[project_id] github" to specify project)</td></tr>)
   ])
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const CommandPrompt = () => {
 
   const handleCommand = () => {
     if (command === 'cls') {
-      setText([ (<tr key={'screen-cleared'}><td colSpan='3'>Screen cleared.</td></tr>) ])
+      setText([(<tr key='screen-cleared'><td colSpan='3'>Screen cleared.</td></tr>)])
     } else {
       const result = getCommand(command, text.length)
       setText([...text, (<tr key={`spacer-${text.length}`}><td colSpan='3'>&nbsp;</td></tr>), ...result])

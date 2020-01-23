@@ -46,7 +46,7 @@ const Command = props => {
 
   return (
     <p id='command-section' className={props.init ? 'hidden' : 'fade-in'}>
-      ##&nbsp;
+      $&nbsp;
       <input
         id='command-input'
         onChange={props.handleChange}

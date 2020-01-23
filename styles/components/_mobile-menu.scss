@@ -3,7 +3,7 @@ nav.mobile-menu {
     background: none;
     color: #fff;
     border: none;
-    font-size: 24px;
+    font-size: 1.5;
     margin: 20px;
     &:hover {
       cursor: pointer;
@@ -24,7 +24,7 @@ nav.mobile-menu {
       position: absolute;
       right: 40px;
       top: 40px;
-      font-size: 32px;
+      font-size: 2rem;
       color: #fff;
       border: none;
       background: none;
@@ -35,7 +35,7 @@ nav.mobile-menu {
     ul.menu-list {
       li {
         margin: 10px;
-        font-size: 24px;
+        font-size: 1.5rem;
         text-align: center;
       }
     }

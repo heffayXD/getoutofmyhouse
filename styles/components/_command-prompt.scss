@@ -9,7 +9,7 @@
   overflow: hidden;
   flex-direction: column;
   z-index: 1;
-  font-size: 18px;
+  font-size: 1.1rem;
   margin: 10px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -35,7 +35,7 @@
     background: #555555;
   }
   @include media(desktop) {
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 600px;
     height: 400px;
     padding: 40px;

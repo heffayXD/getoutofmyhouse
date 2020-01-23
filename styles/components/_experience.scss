@@ -23,16 +23,16 @@
       h3 {
         text-align: center;
         margin-bottom: 10px;
-        font-size: 28px;
+        font-size: 1.75rem;
       }
       ul.topic-list {
         text-align: left;
         padding-left: 26px;
         li {
-          font-size: 22px;
+          font-size: 1.4rem;
           position: relative;
           &:before {
-            font-size: 18px;
+            font-size: 1.1rem;
             top: 2px;
             font-family: "Font Awesome 5 Free";
             content: "\f00c";
@@ -59,7 +59,7 @@
       animation: icon-scroll 12s linear infinite;
     }
     i {
-      font-size: 46px;
+      font-size: 2.9rem;
     }
   }
 }

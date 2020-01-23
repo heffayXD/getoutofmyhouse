@@ -1,5 +1,3 @@
-import CodeBlock from './CodeBlock'
-
 const Hero = () => {
   return (
     <div id='hero'>
@@ -9,7 +7,7 @@ const Hero = () => {
           <a className='icon-link' href='https://github.com/heffayXD' target='_blank' rel='noopener noreferrer' title='Github'>
             <i className='fab fa-github' />
           </a>
-          <a className='icon-link' href='#' target='_blank' rel='nofollow' title='Resume'>
+          <a className='icon-link' href='/static/downloads/Resume.pdf' target='_blank' rel='nofollow' title='Resume' download>
             <i className='fas fa-file-pdf' />
           </a>
         </div>

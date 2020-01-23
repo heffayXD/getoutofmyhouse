@@ -3,12 +3,17 @@
 @import 'forms';
 
 @import './components/header';
+@import './components/mobile-menu';
 @import './components/footer';
 @import './components/hero';
 @import './components/experience';
 @import './components/command-prompt';
 @import './components/code-block';
 @import './components/projects';
+
+body.no-scroll {
+  overflow: hidden;
+}
 
 .row {
   padding-top: 40px;

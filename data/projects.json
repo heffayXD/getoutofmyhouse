@@ -10,7 +10,7 @@
         ],
         "links": [
             {
-                "url": "https://github.com/heffayXD",
+                "url": "https://github.com/heffayXD/reencrypt",
                 "title": "Github",
                 "icon": "fab fa-github",
                 "download": false
@@ -35,25 +35,31 @@
         ],
         "links": [
             {
-                "url": "https://github.com/heffayXD",
-                "title": "Github",
+                "url": "https://github.com/heffayXD/trackpad-server",
+                "title": "Desktop Github",
                 "icon": "fab fa-github",
                 "download": false
             },
             {
-                "url": "#",
+                "url": "/static/downloads/TrackPad-Server-Setup-0.1.0.exe",
                 "title": "Windows Download",
                 "icon": "fab fa-windows",
                 "download": true
             },
             {
-                "url": "#",
+                "url": "https://github.com/heffayXD/trackpad-mobile",
+                "title": "Mobile Github",
+                "icon": "fab fa-github",
+                "download": false
+            },
+            {
+                "url": "/static/downloads/trackpad-0.1.0.apk",
                 "title": "Android SDK Download",
                 "icon": "fab fa-android",
                 "download": true
             }
         ],
-        "image": "/static/images/reencrypt.jpg"
+        "image": "/static/images/trackpad.jpg"
     },
     {
         "title": "React Picture Crop",
@@ -63,12 +69,18 @@
         ],
         "links": [
             {
-                "url": "https://github.com/heffayXD",
+                "url": "https://github.com/heffayXD/react-picture-crop",
                 "title": "Github",
                 "icon": "fab fa-github",
                 "download": false
+            },
+            {
+                "url": "https://www.npmjs.com/package/@heffayxd/react-picture-crop",
+                "title": "Github",
+                "icon": "fab fa-npm",
+                "download": false
             }
         ],
-        "image": "/static/images/reencrypt.jpg"
+        "image": "/static/images/picturecrop.jpg"
     }
 ]

@@ -1,15 +1,32 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const Contact = () => {
   const [data, setData] = useState({ name: '', email: '', message: '' })
+  const [loading, setLoading] = useState(false)
+  const [sent, setSent] = useState(false)
 
   const handleChange = e => {
     setData({ ...data, [e.target.name]: e.target.value })
   }
 
+  const sendEmail = async () => {
+    try {
+      await axios.post('https://graphql.getoutofmyhouse.dev', {
+        query: `query EmailSubmission { sendEmail(email: { name: "${data.name}", from: "${data.email}", subject: "Message from site", message: "${data.message}" }) { message } }`
+      })
+
+      setLoading(false)
+      setSent(true)
+    } catch (err) {
+      setLoading(false)
+    }
+  }
+
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(data)
+    setLoading(true)
+    sendEmail()
   }
 
   return (
@@ -37,7 +54,7 @@ const Contact = () => {
         <div className='input-container'>
           <textarea placeholder='Message' name='message' value={data.message} onChange={handleChange} required />
         </div>
-        <input type='submit' value='submit' />
+        <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading} />
       </form>
     </div>
   )

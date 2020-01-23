@@ -15,7 +15,7 @@ const MobileMenu = () => {
 
   return (
     <nav className='mobile-menu'>
-      <button onClick={handleClick} name='menu' className='menu-toggle'>
+      <button onClick={handleClick} aria-label='Menu Toggle' className='menu-toggle'>
         <i className='fas fa-bars' />
       </button>
       <div className={`backdrop ${show ? 'show' : ''}`} onClick={handleClick}>

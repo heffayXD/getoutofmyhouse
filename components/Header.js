@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Nav from './Nav'
 
 const Header = () => {
   return (
@@ -7,7 +6,6 @@ const Header = () => {
       <Link href='/'>
         <a className='title'>GetOutOfMyHouse</a>
       </Link>
-      <Nav />
     </header>
   )
 }

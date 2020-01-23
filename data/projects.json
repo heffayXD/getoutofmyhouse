@@ -22,7 +22,8 @@
                 "download": true
             }
         ],
-        "image": "/static/images/reencrypt.jpg"
+        "image": "/static/images/reencrypt.jpg",
+        "imageAlt": "re:Encrypt Application"
     },
     {
         "title": "TrackPad",
@@ -59,7 +60,8 @@
                 "download": true
             }
         ],
-        "image": "/static/images/trackpad.jpg"
+        "image": "/static/images/trackpad.jpg",
+        "imageAlt": "TrackPad Application"
     },
     {
         "title": "React Picture Crop",
@@ -81,6 +83,7 @@
                 "download": false
             }
         ],
-        "image": "/static/images/picturecrop.jpg"
+        "image": "/static/images/picturecrop.jpg",
+        "imageAlt": "Picture Crop Library"
     }
 ]

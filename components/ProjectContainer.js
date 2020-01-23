@@ -31,7 +31,7 @@ const ProjectContainer = props => {
   return (
     <div className={`project-container ${props.reverse ? 'reverse' : ''}`}>
       <div className='image-container'>
-        <img className='' src={project.image} />
+        <img className='' src={project.image} alt={project.imageAlt} />
       </div>
       <div className='project-content'>
         <h2 className='project-title'>{project.title}</h2>

@@ -34,6 +34,7 @@ const Contact = () => {
       <h1 className='title'>Contact</h1>
       <form id='contact-form' onSubmit={handleSubmit}>
         <div className='input-container'>
+          <label htmlFor='name' className='access-label'>Name</label>
           <input
             type='text'
             name='name'
@@ -42,6 +43,7 @@ const Contact = () => {
             onChange={handleChange}
             required
           />
+          <label htmlFor='email' className='access-label'>Email</label>
           <input
             type='text'
             name='email'
@@ -52,6 +54,7 @@ const Contact = () => {
           />
         </div>
         <div className='input-container'>
+          <label htmlFor='message' className='access-label'>Message</label>
           <textarea placeholder='Message' name='message' value={data.message} onChange={handleChange} required />
         </div>
         <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading} />

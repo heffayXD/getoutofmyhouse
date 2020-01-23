@@ -6,6 +6,7 @@ class Project {
     this.technologies = obj.technologies || []
     this.image = obj.image || ''
     this.links = obj.links || {}
+    this.imageAlt = obj.imageAlt || ''
   }
 }
 

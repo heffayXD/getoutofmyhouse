@@ -49,10 +49,12 @@ const Command = props => {
       $&nbsp;
       <input
         id='command-input'
+        name='command'
         onChange={props.handleChange}
         onKeyDown={handleKeyDown}
         value={props.command}
       />
+      <label htmlFor='command-input' className='access-label'>Command</label>
       {props.command}
     </p>
   )

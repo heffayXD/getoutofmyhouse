@@ -22,13 +22,10 @@ const MobileMenu = () => {
         <button onClick={handleClick} className='close-button'>&times;</button>
         <ul className='menu-list'>
           <li className='menu-item'>
-            <a href='#experience'>Experience</a>
-          </li>
-          <li className='menu-item'>
             <a href='#projects'>Projects</a>
           </li>
           <li className='menu-item'>
-            <a href='#terminal'>Terminal</a>
+            <a href='#experience'>Experience</a>
           </li>
           <li className='menu-item'>
             <a href='#contact'>Contact</a>

@@ -55,21 +55,35 @@ body.no-scroll {
   }
 }
 
+.hide {
+  opacity: 0;
+  transform: translateY(40px);
+}
 
 .icon-link {
   color: #111;
   margin: 10px;
   margin-top: 20px;
   font-size: 2rem;
+  i {
+    transition: opacity 0.2s ease-out;
+    opacity: 0.8;
+  }
   &:hover {
     cursor: pointer;
     color: #111;
+    i {
+      opacity: 1;
+    }
   }
   &:vistied {
     color: #111;
   }
   &:active {
     color: #111;
+    i {
+      opacity: 1;
+    }
   }
 }
 
@@ -89,4 +103,8 @@ body.no-scroll {
       }
     }
   }
+}
+
+.error {
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }

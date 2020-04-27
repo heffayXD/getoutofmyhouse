@@ -14,9 +14,8 @@ const Hero = () => {
       </div>
       <div className='hero-nav'>
         <h2>Navigation</h2>
-        <a href='#experience'>Experience</a>
         <a href='#projects'>Projects</a>
-        <a href='#terminal'>Terminal</a>
+        <a href='#experience'>Experience</a>
         <a href='#contact'>Contact</a>
       </div>
       <div className='hero-background'>

@@ -1,5 +1,17 @@
+import { useState, useRef } from 'react'
+
+import { useScroll } from '../hooks/scroll'
+
 const ProjectContainer = props => {
+  const [show, setShow] = useState(false)
+  const refContainer = useRef(null)
   const { project } = props
+
+  useScroll(() => {
+    if (refContainer.current.getBoundingClientRect().top < (window.innerHeight - 100)) {
+      setShow(true)
+    }
+  })
 
   const getTechs = () => {
     return project.technologies.map((tech, index) => (
@@ -33,7 +45,7 @@ const ProjectContainer = props => {
       <div className='image-container'>
         <img className='' src={project.image} alt={project.imageAlt} />
       </div>
-      <div className='project-content'>
+      <div className={`project-content ${show ? '' : 'hide'}`} ref={refContainer}>
         <h2 className='project-title'>{project.title}</h2>
         <p>{project.description}</p>
         <h3 className='techs-title'>Technologies</h3>

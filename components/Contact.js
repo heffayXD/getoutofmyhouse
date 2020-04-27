@@ -5,6 +5,7 @@ const Contact = () => {
   const [data, setData] = useState({ name: '', email: '', message: '' })
   const [loading, setLoading] = useState(false)
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleChange = e => {
     setData({ ...data, [e.target.name]: e.target.value })
@@ -12,21 +13,32 @@ const Contact = () => {
 
   const sendEmail = async () => {
     try {
-      await axios.post('https://graphql.getoutofmyhouse.dev', {
+      const result = await axios.post('https://graphql.getoutofmyhouse.dev', {
         query: `query EmailSubmission { sendEmail(email: { name: "${data.name}", from: "${data.email}", subject: "Message from site", message: "${data.message}" }) { message } }`
       })
 
+      const message = result.data.data.sendEmail.message
+
+      if (message === 'error') {
+        setError(true)
+      } else {
+        setSent(true)
+      }
+
       setLoading(false)
-      setSent(true)
     } catch (err) {
       setLoading(false)
+      setError(true)
     }
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    setLoading(true)
-    sendEmail()
+    if (!sent) {
+      setError(false)
+      setLoading(true)
+      sendEmail()
+    }
   }
 
   return (
@@ -67,6 +79,7 @@ const Contact = () => {
           />
         </div>
         <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading} />
+        <p className={`error ${error ? '' : 'hide'}`}>Something went wrong. Please try again later.</p>
       </form>
     </div>
   )

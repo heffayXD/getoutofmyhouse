@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 const Hero = () => {
   return (
     <div id='hero'>
@@ -5,10 +9,10 @@ const Hero = () => {
         <h1>Full Stack Development</h1>
         <div className='icon-container alt'>
           <a className='icon-link' href='https://github.com/heffayXD' target='_blank' rel='noopener noreferrer' title='Github'>
-            <i className='fab fa-github' />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
           <a className='icon-link' href='/static/downloads/Resume.pdf' target='_blank' rel='nofollow' title='Resume' download>
-            <i className='fas fa-file-pdf' />
+            <FontAwesomeIcon icon={faFilePdf} />
           </a>
         </div>
       </div>

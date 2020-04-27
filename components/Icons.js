@@ -1,26 +1,29 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNode, faPhp, faJsSquare, faLaravel, faSass, faReact, faVuejs, faJava, faCss3, faNpm } from '@fortawesome/free-brands-svg-icons'
+
 const Icons = props => {
   return (
     <div id='icons'>
-      <i className='fab fa-node' />
-      <i className='fab fa-php' />
-      <i className='fab fa-js-square' />
-      <i className='fab fa-laravel' />
-      <i className='fab fa-sass' />
-      <i className='fab fa-react' />
-      <i className='fab fa-vuejs' />
-      <i className='fab fa-java' />
-      <i className='fab fa-css3' />
-      <i className='fab fa-npm' />
-      <i className='fab fa-node' />
-      <i className='fab fa-php' />
-      <i className='fab fa-js-square' />
-      <i className='fab fa-laravel' />
-      <i className='fab fa-sass' />
-      <i className='fab fa-react' />
-      <i className='fab fa-vuejs' />
-      <i className='fab fa-java' />
-      <i className='fab fa-css3' />
-      <i className='fab fa-npm' />
+      <FontAwesomeIcon icon={faNode} />
+      <FontAwesomeIcon icon={faPhp} />
+      <FontAwesomeIcon icon={faJsSquare} />
+      <FontAwesomeIcon icon={faLaravel} />
+      <FontAwesomeIcon icon={faSass} />
+      <FontAwesomeIcon icon={faReact} />
+      <FontAwesomeIcon icon={faVuejs} />
+      <FontAwesomeIcon icon={faJava} />
+      <FontAwesomeIcon icon={faCss3} />
+      <FontAwesomeIcon icon={faNpm} />
+      <FontAwesomeIcon icon={faNode} />
+      <FontAwesomeIcon icon={faPhp} />
+      <FontAwesomeIcon icon={faJsSquare} />
+      <FontAwesomeIcon icon={faLaravel} />
+      <FontAwesomeIcon icon={faSass} />
+      <FontAwesomeIcon icon={faReact} />
+      <FontAwesomeIcon icon={faVuejs} />
+      <FontAwesomeIcon icon={faJava} />
+      <FontAwesomeIcon icon={faCss3} />
+      <FontAwesomeIcon icon={faNpm} />
     </div>
   )
 }

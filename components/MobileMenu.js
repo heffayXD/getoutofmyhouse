@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const MobileMenu = () => {
   const [show, setShow] = useState(false)
@@ -16,7 +18,7 @@ const MobileMenu = () => {
   return (
     <nav className='mobile-menu'>
       <button onClick={handleClick} aria-label='Menu Toggle' className='menu-toggle'>
-        <i className='fas fa-bars' />
+        <FontAwesomeIcon icon={faBars} />
       </button>
       <div className={`backdrop ${show ? 'show' : ''}`} onClick={handleClick}>
         <button onClick={handleClick} className='close-button'>&times;</button>

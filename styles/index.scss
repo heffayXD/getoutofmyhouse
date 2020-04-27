@@ -65,14 +65,15 @@ body.no-scroll {
   margin: 10px;
   margin-top: 20px;
   font-size: 2rem;
-  i {
+  svg {
+    font-size: 32px;
     transition: opacity 0.2s ease-out;
     opacity: 0.8;
   }
   &:hover {
     cursor: pointer;
     color: #111;
-    i {
+    svg {
       opacity: 1;
     }
   }
@@ -81,7 +82,7 @@ body.no-scroll {
   }
   &:active {
     color: #111;
-    i {
+    svg {
       opacity: 1;
     }
   }

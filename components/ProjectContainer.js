@@ -1,4 +1,6 @@
 import { useState, useRef } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faWindows, faAndroid, faNpm } from '@fortawesome/free-brands-svg-icons'
 
 import { useScroll } from '../hooks/scroll'
 
@@ -24,6 +26,19 @@ const ProjectContainer = props => {
     ))
   }
 
+  const getIcon = icon => {
+    switch (icon) {
+      case 'github':
+        return faGithub
+      case 'windows':
+        return faWindows
+      case 'android':
+        return faAndroid
+      case 'npm':
+        return faNpm
+    }
+  }
+
   const getLinks = () => {
     return project.links.map((link, index) => (
       <a
@@ -35,7 +50,7 @@ const ProjectContainer = props => {
         title={link.title}
         download={link.download}
       >
-        <i className={link.icon} />
+        <FontAwesomeIcon icon={getIcon(link.icon)} />
       </a>
     ))
   }
@@ -43,7 +58,7 @@ const ProjectContainer = props => {
   return (
     <div className={`project-container ${props.reverse ? 'reverse' : ''}`}>
       <div className='image-container'>
-        <img className='' src={project.image} alt={project.imageAlt} />
+        <img className='' src={require(`../static/images/${project.image}`)} alt={project.imageAlt} />
       </div>
       <div className={`project-content ${show ? '' : 'hide'}`} ref={refContainer}>
         <h2 className='project-title'>{project.title}</h2>

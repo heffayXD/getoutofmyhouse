@@ -12,17 +12,17 @@
             {
                 "url": "https://github.com/heffayXD/reencrypt",
                 "title": "Github",
-                "icon": "fab fa-github",
+                "icon": "github",
                 "download": false
             },
             {
                 "url": "/static/downloads/reEncrypt-Setup-0.1.0.exe",
                 "title": "Windows Download",
-                "icon": "fab fa-windows",
+                "icon": "windows",
                 "download": true
             }
         ],
-        "image": "/static/images/reencrypt.jpg",
+        "image": "reencrypt.jpg",
         "imageAlt": "re:Encrypt Application"
     },
     {
@@ -38,29 +38,29 @@
             {
                 "url": "https://github.com/heffayXD/trackpad-server",
                 "title": "Desktop Github",
-                "icon": "fab fa-github",
+                "icon": "github",
                 "download": false
             },
             {
                 "url": "/static/downloads/TrackPad-Server-Setup-0.1.0.exe",
                 "title": "Windows Download",
-                "icon": "fab fa-windows",
+                "icon": "windows",
                 "download": true
             },
             {
                 "url": "https://github.com/heffayXD/trackpad-mobile",
                 "title": "Mobile Github",
-                "icon": "fab fa-github",
+                "icon": "github",
                 "download": false
             },
             {
                 "url": "/static/downloads/trackpad-0.1.0.apk",
                 "title": "Android SDK Download",
-                "icon": "fab fa-android",
+                "icon": "android",
                 "download": true
             }
         ],
-        "image": "/static/images/trackpad.jpg",
+        "image": "trackpad.jpg",
         "imageAlt": "TrackPad Application"
     },
     {
@@ -73,17 +73,17 @@
             {
                 "url": "https://github.com/heffayXD/react-picture-crop",
                 "title": "Github",
-                "icon": "fab fa-github",
+                "icon": "github",
                 "download": false
             },
             {
                 "url": "https://www.npmjs.com/package/@heffayxd/react-picture-crop",
                 "title": "NPM",
-                "icon": "fab fa-npm",
+                "icon": "npm",
                 "download": false
             }
         ],
-        "image": "/static/images/picturecrop.jpg",
+        "image": "picturecrop.jpg",
         "imageAlt": "Picture Crop Library"
     }
 ]

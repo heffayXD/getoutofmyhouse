@@ -27,8 +27,9 @@ const Hero = () => {
       <div className='hero-background'>
         <div className='block-1' />
         <div className='block-2' />
-        <Background />
-        <div className='overlay' />
+        <div className='hero-image-container'>
+          <div className='overlay' />
+        </div>
       </div>
     </div>
   )

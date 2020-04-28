@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+import Background from './Background'
+
 const Hero = () => {
   return (
     <div id='hero'>
@@ -25,9 +27,8 @@ const Hero = () => {
       <div className='hero-background'>
         <div className='block-1' />
         <div className='block-2' />
-        <div className='hero-image-container'>
-          <div className='overlay' />
-        </div>
+        <Background />
+        <div className='overlay' />
       </div>
     </div>
   )

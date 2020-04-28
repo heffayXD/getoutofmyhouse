@@ -9,7 +9,6 @@ const LoadingBar = props => {
 
     return chars.join('')
   }
-  
   return (
     <span className='loading-bar'>[{getProgress()}]</span>
   )

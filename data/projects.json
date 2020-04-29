@@ -16,7 +16,7 @@
                 "download": false
             },
             {
-                "url": "/static/downloads/reEncrypt-Setup-0.1.0.exe",
+                "url": "/static/downloads/reEncrypt-Setup-0.1.1.exe",
                 "title": "Windows Download",
                 "icon": "windows",
                 "download": true

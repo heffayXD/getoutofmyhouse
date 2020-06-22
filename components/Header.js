@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <Link href='/'>
-        <a className='title'>GetOutOfMyHouse</a>
+        <a className='title'>heffay.dev</a>
       </Link>
       <MobileMenu />
     </header>

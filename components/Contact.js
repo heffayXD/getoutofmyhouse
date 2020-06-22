@@ -13,7 +13,7 @@ const Contact = () => {
 
   const sendEmail = async () => {
     try {
-      const result = await axios.post('https://graphql.getoutofmyhouse.dev', {
+      const result = await axios.post('https://graphql.heffay.dev', {
         query: `query EmailSubmission { sendEmail(email: { name: "${data.name}", from: "${data.email}", subject: "Message from site", message: "${data.message}" }) { message } }`
       })
 

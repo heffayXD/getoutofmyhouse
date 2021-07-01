@@ -79,7 +79,7 @@ const Contact = () => {
           />
         </div>
         <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading} />
-        <p className={`error ${error ? '' : 'hide'}`}>Something went wrong. Please try again later.</p>
+        <p className={`error ${error ? '' : 'hide'}`}>Message has been sent.</p>
       </form>
     </div>
   )

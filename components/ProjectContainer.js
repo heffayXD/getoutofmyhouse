@@ -59,7 +59,7 @@ const ProjectContainer = props => {
   return (
     <div className={`project-container ${props.reverse ? 'reverse' : ''}`}>
       <div className='image-container'>
-        <Image src={require(`../static/images/${project.image}`)} alt={project.imageAlt} />
+        <Image src={require(`../public/images/${project.image}`)} alt={project.imageAlt} />
       </div>
       <div className={`project-content ${show ? '' : 'hide'}`} ref={refContainer}>
         <h2 className='project-title'>{project.title}</h2>

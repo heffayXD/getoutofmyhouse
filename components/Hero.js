@@ -11,7 +11,7 @@ const Hero = () => {
           <a className='icon-link' href='https://github.com/heffayXD' target='_blank' rel='noopener noreferrer' title='Github'>
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a className='icon-link' href='/static/downloads/Resume.pdf' target='_blank' rel='nofollow' title='Resume' download>
+          <a className='icon-link' href='/downloads/Resume.pdf' target='_blank' rel='nofollow' title='Resume' download>
             <FontAwesomeIcon icon={faFilePdf} />
           </a>
         </div>

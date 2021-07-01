@@ -1,4 +1,4 @@
-static/
+# static/
 public/
 node_modules
 .next

@@ -16,7 +16,7 @@
                 "download": false
             },
             {
-                "url": "/static/downloads/reEncrypt-Setup-0.1.1.exe",
+                "url": "/public/downloads/reEncrypt-Setup-0.1.1.exe",
                 "title": "Windows Download",
                 "icon": "windows",
                 "download": true
@@ -42,7 +42,7 @@
                 "download": false
             },
             {
-                "url": "/static/downloads/TrackPad-Server-Setup-0.1.0.exe",
+                "url": "/public/downloads/TrackPad-Server-Setup-0.1.0.exe",
                 "title": "Windows Download",
                 "icon": "windows",
                 "download": true
@@ -54,7 +54,7 @@
                 "download": false
             },
             {
-                "url": "/static/downloads/trackpad-0.1.0.apk",
+                "url": "/public/downloads/trackpad-0.1.0.apk",
                 "title": "Android SDK Download",
                 "icon": "android",
                 "download": true

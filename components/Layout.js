@@ -1,7 +1,6 @@
 import HeadComponent from './HeadComponent'
 import Header from './header'
 import Footer from './footer'
-import '../styles/index.scss'
 
 const Layout = props => {
   return (

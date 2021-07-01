@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faWindows, faAndroid, faNpm } from '@fortawesome/free-brands-svg-icons'
 
@@ -58,7 +59,7 @@ const ProjectContainer = props => {
   return (
     <div className={`project-container ${props.reverse ? 'reverse' : ''}`}>
       <div className='image-container'>
-        <img className='' src={require(`../static/images/${project.image}`)} alt={project.imageAlt} />
+        <Image src={require(`../static/images/${project.image}`)} alt={project.imageAlt} />
       </div>
       <div className={`project-content ${show ? '' : 'hide'}`} ref={refContainer}>
         <h2 className='project-title'>{project.title}</h2>

@@ -1,0 +1,91 @@
+@import "styles/variables";
+
+.projectContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    .content {
+        padding: 20px;
+        margin: 10px;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        .projectTitle {
+            margin-bottom: 20px;
+        }
+        .techsTitle {
+            margin-top: 20px;
+        }
+        @include media(desktop) {
+            box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+            border-radius: 12px;
+            border: 1px solid $faded;
+            width: 25%;
+            padding: 40px;
+        }
+    }
+    .imageContainer {
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        @include media(desktop) {
+            width: auto;
+        }
+    }
+    @include media(desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    .iconLink {
+        color: $black;
+        margin: 10px;
+        margin-top: 20px;
+        font-size: 2rem;
+        svg {
+          font-size: 32px;
+          transition: opacity 0.2s ease-out;
+          opacity: 0.8;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $black;
+          svg {
+            opacity: 1;
+          }
+        }
+        &:vistied {
+          color: $black;
+        }
+        &:active {
+          color: $black;
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+    .iconContainer {
+        margin-top: 20px;
+        &.alt {
+            .iconLink {
+                color: $white;
+                &:hover {
+                    color: $white;
+                }
+                &:vistied {
+                    color: $white;
+                }
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+  

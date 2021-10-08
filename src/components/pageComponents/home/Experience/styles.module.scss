@@ -1,0 +1,49 @@
+@import "styles/variables";
+
+.experience {
+    position: relative;
+    overflow: hidden;
+    .disclaimer {
+        text-align: center;
+        width: 100%;
+    }
+    .topicList {
+        display: flex;
+        padding: 40px;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .topic {
+            margin: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            width: 200px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            h3 {
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 1.75rem;
+            }
+            .innerList {
+                text-align: left;
+                padding-left: 26px;
+                li {
+                    font-size: 1.4rem;
+                    position: relative;
+                    svg {
+                        font-size: 1.1rem;
+                        top: 2px;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f00c";
+                        position: absolute;
+                        left: -24px;
+                    }
+                }
+            }
+        }
+    }
+}
+  

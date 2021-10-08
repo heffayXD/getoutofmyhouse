@@ -1,11 +1,13 @@
 import Link from 'next/link'
-import MobileMenu from '../MobileMenu/MobileMenu'
+import classes from './styles.module.scss'
+
+import MobileMenu from 'components/utilities/MobileMenu'
 
 const Header = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <Link href='/'>
-        <a className='title'>heffay.dev</a>
+        <a className={classes.title}>heffay.dev</a>
       </Link>
       <MobileMenu />
     </header>

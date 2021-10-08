@@ -1,9 +1,11 @@
+import classes from './styles.module.scss'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNode, faPhp, faJsSquare, faLaravel, faSass, faReact, faVuejs, faJava, faCss3, faNpm } from '@fortawesome/free-brands-svg-icons'
 
 const Icons = props => {
   return (
-    <div id='icons'>
+    <div className={classes.icons}>
       <FontAwesomeIcon icon={faNode} />
       <FontAwesomeIcon icon={faPhp} />
       <FontAwesomeIcon icon={faJsSquare} />

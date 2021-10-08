@@ -1,7 +1,9 @@
+import classes from './styles.module.scss'
+
 const Footer = () => {
   return (
-    <footer>
-      <p id='copyright'>heffay.dev {new Date().getFullYear()}</p>
+    <footer className={classes.footer}>
+      <p className={classes.copyright}>heffay.dev {new Date().getFullYear()}</p>
     </footer>
   )
 }

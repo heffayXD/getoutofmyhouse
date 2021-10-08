@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import classes from './styles.module.scss'
 
 const Contact = () => {
   const [data, setData] = useState({ name: '', email: '', message: '' })
@@ -42,7 +43,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='row' id='contact'>
+    <div className={`${classes.contact} row`}>
       <h1 className='title'>Contact</h1>
       <form id='contact-form' onSubmit={handleSubmit}>
         <div className='input-container'>

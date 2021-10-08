@@ -2,14 +2,6 @@
 @import 'reset';
 @import 'forms';
 
-@import './components/header';
-@import './components/mobile-menu';
-@import './components/footer';
-@import './components/hero';
-@import './components/experience';
-// @import './components/background';
-@import './components/projects';
-
 body.no-scroll {
   overflow: hidden;
 }
@@ -57,52 +49,6 @@ body.no-scroll {
 .hide {
   opacity: 0;
   transform: translateY(40px);
-}
-
-.icon-link {
-  color: #111;
-  margin: 10px;
-  margin-top: 20px;
-  font-size: 2rem;
-  svg {
-    font-size: 32px;
-    transition: opacity 0.2s ease-out;
-    opacity: 0.8;
-  }
-  &:hover {
-    cursor: pointer;
-    color: #111;
-    svg {
-      opacity: 1;
-    }
-  }
-  &:vistied {
-    color: #111;
-  }
-  &:active {
-    color: #111;
-    svg {
-      opacity: 1;
-    }
-  }
-}
-
-.icon-container {
-  margin-top: 20px;
-  &.alt {
-    .icon-link {
-      color: #fff;
-      &:hover {
-        color: #fff;
-      }
-      &:vistied {
-        color: #fff;
-      }
-      &:active {
-        color: #fff;
-      }
-    }
-  }
 }
 
 .error {

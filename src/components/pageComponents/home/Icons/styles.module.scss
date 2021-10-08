@@ -1,0 +1,39 @@
+@import "styles/variables";
+
+.icons {
+    position: absolute;
+    width: 500%;
+    top: 40px;
+    width: 500%;
+    opacity: 0.1;
+    white-space: nowrap;
+    animation: icon-scroll 16s linear infinite;
+    display: flex;
+    justify-content: space-around;
+    @include media(tablet) {
+      width: 200%;
+      animation: icon-scroll 12s linear infinite;
+    }
+    svg {
+      font-size: 2.9rem;
+    }
+}
+
+@keyframes icon-scroll {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -250%;
+    }
+}
+@include media(tablet) {
+    @keyframes icon-scroll {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+}

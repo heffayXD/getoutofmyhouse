@@ -7,25 +7,39 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "babel-node api/index.js start",
+    "build": "concurrently \"babel api -d dist\" \"next build\"",
+    "postbuild": "next-sitemap",
+    "start": "node dist/index.js",
+    "test": "jest --watch"
   },
   "author": "Jeff",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "axios": "^0.22.0",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "next": "^11.1.2",
+    "next-sitemap": "^1.6.179",
+    "nodemailer": "^6.6.5",
     "postcss": "^8.3.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.42.1"
   },
   "devDependencies": {
+    "babel-jest": "^27.2.4",
+    "jest": "^27.2.4",
     "standard": "^16.0.4"
   }
 }

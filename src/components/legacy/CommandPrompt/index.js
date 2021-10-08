@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import LoadingBar from './LoadingBar'
-import { useCommands } from '../../hooks/command-prompt'
+import { useCommands } from '../../../hooks/command-prompt'
 import Command from './Command'
 
 const CommandPrompt = () => {

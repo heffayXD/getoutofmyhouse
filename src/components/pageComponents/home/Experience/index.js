@@ -1,4 +1,4 @@
-import Icons from './Icons'
+import Icons from '../Icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 

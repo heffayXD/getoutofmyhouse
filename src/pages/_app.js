@@ -1,7 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 
-import '../styles/index.scss'
+import 'styles/index.scss'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS

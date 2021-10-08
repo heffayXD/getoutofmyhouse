@@ -1,6 +1,6 @@
-import Project from '../models/Project'
-import ProjectContainer from './ProjectContainer'
-import projects from '../data/projects.json'
+import Project from '../../../../models/Project'
+import ProjectContainer from '../ProjectContainer'
+import projects from 'data/projects.json'
 
 const Projects = () => {
   const getProjects = () => {

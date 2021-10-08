@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import MobileMenu from './MobileMenu'
+import MobileMenu from '../MobileMenu/MobileMenu'
 
 const Header = () => {
   return (

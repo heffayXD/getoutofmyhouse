@@ -92,7 +92,7 @@
         }
       }
       @include media(desktop) {
-        .block-1, .block-2 {
+        .firstBlock, .secondBlock {
           display: block;
         }
       }

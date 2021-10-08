@@ -1,5 +1,8 @@
 @import "styles/variables";
 
 .contact {
-    
+    .hide {
+        opacity: 0;
+        transform: translateY(40px);
+    }
 }

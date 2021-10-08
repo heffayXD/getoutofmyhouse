@@ -21,6 +21,10 @@
             width: 25%;
             padding: 40px;
         }
+        &.hide {
+            opacity: 0;
+            transform: translateY(40px);
+        }
     }
     .imageContainer {
         text-align: center;

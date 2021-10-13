@@ -1,29 +1,30 @@
 [
     {
         "title": "re:Encrypt",
-        "description": "re:Encrypt is a password manager application that encrypts your usernames and passwords on your own machine using a password that you define. It stores them in an easy to transfer file, and can be loaded on any machine.",
+        "description": "re:Encrypt is a password manager application that encrypts your usernames and passwords locally before syncing them between your devices, preventing the risk of data loss.",
         "technologies": [
-            "React JS",
+            "Node",
+            "React",
             "Redux",
             "Electron",
-            "Node JS"
+            "React Native"
         ],
         "links": [
             {
-                "url": "https://github.com/heffayXD/reencrypt",
-                "title": "Github",
-                "icon": "github",
+                "url": "https://re-encrypt.com",
+                "title": "Visit Website",
+                "icon": "website",
                 "download": false
             },
             {
-                "url": "/downloads/reEncrypt-Setup-0.1.1.exe",
-                "title": "Windows Download",
-                "icon": "windows",
-                "download": true
+                "url": "https://play.google.com/store/apps/details?id=com.reencrypt",
+                "title": "View on Google Play",
+                "icon": "android",
+                "download": false
             }
         ],
-        "image": "reencrypt.jpg",
-        "imageAlt": "re:Encrypt Application"
+        "image": "reencrypt.png",
+        "imageAlt": "re:Encrypt Desktop and Mobile Applications"
     },
     {
         "title": "TrackPad",

@@ -4,32 +4,27 @@ import classes from './styles.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faWindows, faAndroid, faNpm } from '@fortawesome/free-brands-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { useScroll } from 'hooks/scroll'
 
-const ProjectContainer = props => {
+const ProjectContainer = ({ project, reverse = false }) => {
   const [show, setShow] = useState(false)
   const refContainer = useRef(null)
-  const { project } = props
 
   useScroll(() => {
-    if (refContainer.current.getBoundingClientRect().top < (window.innerHeight - 100)) {
+    const top = refContainer.current.getBoundingClientRect().top
+    if (top < (window.innerHeight - 100)) {
       setShow(true)
     }
   })
-
-  const getTechs = () => {
-    return project.technologies.map((tech, index) => (
-      <li className={classes.techItem} key={`tech-item-${project.key}-${index}`}>
-        {tech}
-      </li>
-    ))
-  }
 
   const getIcon = icon => {
     switch (icon) {
       case 'github':
         return faGithub
+      case 'website':
+        return faExternalLinkAlt
       case 'windows':
         return faWindows
       case 'android':
@@ -39,37 +34,31 @@ const ProjectContainer = props => {
     }
   }
 
-  const getLinks = () => {
-    return project.links.map((link, index) => (
-      <a
-        key={`link-${project.key}-${index}`}
-        className={classes.iconLink}
-        href={link.url}
-        target='_blank'
-        rel='noopener noreferrer'
-        title={link.title}
-        download={link.download}
-      >
-        <FontAwesomeIcon icon={getIcon(link.icon)} />
-      </a>
-    ))
-  }
-
   return (
-    <div className={`${classes.projectContainer} ${props.reverse ? classes.reverse : ''}`}>
-      <div className={classes.imageContainer}>
-        <Image src={require(`../../../../../public/images/${project.image}`)} alt={project.imageAlt} />
-      </div>
+    <div className={`${classes.projectContainer} ${reverse ? classes.reverse : ''}`}>
       <div className={`${classes.content} ${show ? '' : classes.hide}`} ref={refContainer}>
         <h2 className={classes.projectTitle}>{project.title}</h2>
         <p>{project.description}</p>
         <h3 className={classes.techsTitle}>Technologies</h3>
-        <ul className={classes.icons}>
-          {getTechs()}
-        </ul>
+        <p>{project.technologies.join(', ')}</p>
         <div className={classes.iconContainer}>
-          {getLinks()}
+          {project.links.map((link, index) => (
+            <a
+              href={link.url}
+              target='_blank'
+              title={link.title}
+              download={link.download}
+              rel='noopener noreferrer'
+              className={classes.iconLink}
+              key={`link-${project.key}-${index}`}
+            >
+              <FontAwesomeIcon icon={getIcon(link.icon)} />
+            </a>
+          ))}
         </div>
+      </div>
+      <div className={classes.imageContainer}>
+        <Image src={require(`../../../../../public/images/${project.image}`)} alt={project.imageAlt} />
       </div>
     </div>
   )

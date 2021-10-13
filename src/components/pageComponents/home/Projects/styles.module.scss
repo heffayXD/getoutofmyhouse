@@ -6,4 +6,9 @@
     .title {
         @include title;
     }
+    .projectsContainer {
+        max-width: calc(1200px - 2em);
+        margin: 0 auto;
+        padding: 0 2em;
+    }
 }

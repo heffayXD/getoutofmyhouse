@@ -8,18 +8,23 @@
         padding: 20px;
         margin: 10px;
         transition: opacity 1s ease-out, transform 1s ease-out;
+        text-align: center;
         .projectTitle {
             margin-bottom: 20px;
         }
         .techsTitle {
             margin-top: 20px;
         }
-        @include media(desktop) {
+        @include media(tablet) {
             box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
             border-radius: 12px;
             border: 1px solid $faded;
-            width: 25%;
+            width: 50%;
             padding: 40px;
+            text-align: left;
+        }
+        @include media(desktop) {
+            width: 40%;
         }
         &.hide {
             opacity: 0;
@@ -32,13 +37,20 @@
         border-radius: 12px;
         overflow: hidden;
         img {
+            max-height: 400px;
             width: 100%;
         }
+        @include media(tablet) {
+            width: 50%;
+            img {
+                max-height: unset;
+            }
+        }
         @include media(desktop) {
-            width: auto;
+            width: 60%;
         }
     }
-    @include media(desktop) {
+    @include media(tablet) {
         display: flex;
         align-items: center;
         justify-content: center;

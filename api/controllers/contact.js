@@ -1,7 +1,8 @@
 import { getBodyFields } from '../helpers/controller'
-// import { verifyRecaptcha } from '../services/recaptcha'
+import { verifyRecaptcha } from '../services/recaptcha'
 import { getTemplate } from '../helpers/templates'
 import { sendEmail } from '../services/emails'
+require('dotenv').config()
 
 /**
  * Contact Us Route
@@ -13,10 +14,11 @@ export const contactUs = async (req, res, next) => {
     const [required, body] = getBodyFields(req.body, fields, fields)
     if (!required) throw body
 
-    // if (req.body.token) {
-    //   const [success, result] = await verifyRecaptcha(req.body.token)
-    //   if (!success) throw result
-    // }
+    if (process.env.NODE_ENV !== 'development') {
+      if (!req.body.token) throw new Error('reCAPTCHA Token Required')
+      const [success, result] = await verifyRecaptcha(req.body.token)
+      if (!success) throw result
+    }
 
     const [loaded, template] = await getTemplate('emails', 'contact', body)
     if (!loaded) throw template

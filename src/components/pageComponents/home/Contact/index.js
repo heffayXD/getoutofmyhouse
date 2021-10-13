@@ -2,6 +2,7 @@ import { useState } from 'react'
 import classes from './styles.module.scss'
 
 import api from 'helpers/api'
+import { getRecaptchaToken } from 'helpers/auth'
 
 const Contact = () => {
   const [fields, setFields] = useState({ name: '', email: '', message: '' })
@@ -20,7 +21,8 @@ const Contact = () => {
       setLoading(true)
       setError('')
 
-      const [success, result] = await api.post('/contact', fields)
+      const token = await getRecaptchaToken()
+      const [success, result] = await api.post('/contact', { ...fields, token })
       if (!success) throw result
 
       setSent(true)
@@ -66,6 +68,7 @@ const Contact = () => {
           />
         </div>
         <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading || sent} />
+        <p className={classes.recaptcha}>This site is protected by reCAPTCHA and the Google <a href='https://policies.google.com/privacy' target='_blank' rel='noreferrer nofollow'>Privacy Policy</a> and <a href='https://policies.google.com/terms' target='_blank' rel='noreferrer nofollow'>Terms of Service</a> apply.</p>
         {
           sent
             ? <p className={classes.message}>Message has been sent.</p>

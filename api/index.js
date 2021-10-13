@@ -2,7 +2,7 @@ import express from 'express'
 import next from 'next'
 import cors from 'cors'
 
-// import apiRoutes from './routes'
+import apiRoutes from './routes'
 import { requireSSL } from './middleware/ssl'
 import { errorHandler } from './services/errors'
 require('dotenv').config()
@@ -19,7 +19,7 @@ app.prepare()
     server.use(requireSSL)
     server.use(express.json())
 
-    // server.use('/api', apiRoutes)
+    server.use('/api', apiRoutes)
     server.get('*', (req, res) => handle(req, res))
 
     server.use(errorHandler)

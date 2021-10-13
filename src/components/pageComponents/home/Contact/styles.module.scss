@@ -1,8 +1,27 @@
 @import "styles/variables";
+@import "styles/mixins";
 
 .contact {
-    .hide {
-        opacity: 0;
-        transform: translateY(40px);
+    @include row;
+    .title {
+        @include title;
+    }
+    .inputContainer {
+        @include input-container;
+    }
+    .message {
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+    .error {
+        margin-top: 1em;
+        font-size: 1.2em;
+        color: $danger;
+        font-weight: bold;
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        &.hide {
+            opacity: 0;
+            transform: translateY(40px);
+        }
     }
 }

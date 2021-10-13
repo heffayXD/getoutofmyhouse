@@ -1,86 +1,76 @@
 import { useState } from 'react'
-import axios from 'axios'
 import classes from './styles.module.scss'
 
+import api from 'helpers/api'
+
 const Contact = () => {
-  const [data, setData] = useState({ name: '', email: '', message: '' })
+  const [fields, setFields] = useState({ name: '', email: '', message: '' })
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const [sent, setSent] = useState(false)
-  const [error, setError] = useState(false)
 
   const handleChange = e => {
-    setData({ ...data, [e.target.name]: e.target.value })
+    setFields({ ...fields, [e.target.name]: e.target.value })
   }
 
-  const sendEmail = async () => {
+  const handleSubmit = async e => {
+    e.preventDefault()
     try {
-      const result = await axios.post('https://graphql.heffay.dev', {
-        query: `query EmailSubmission { sendEmail(email: { name: "${data.name}", from: "${data.email}", subject: "Message from site", message: "${data.message}" }) { message } }`
-      })
+      if (loading || sent) return
+      setLoading(true)
+      setError('')
 
-      const message = result.data.data.sendEmail.message
+      const [success, result] = await api.post('/contact', fields)
+      if (!success) throw result
 
-      if (message === 'error') {
-        setError(true)
-      } else {
-        setSent(true)
-      }
-
+      setSent(true)
       setLoading(false)
     } catch (err) {
+      setError(err.message)
       setLoading(false)
-      setError(true)
-    }
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    if (!sent) {
-      setError(false)
-      setLoading(true)
-      sendEmail()
     }
   }
 
   return (
-    <div className={`${classes.contact} row`}>
-      <h1 className='title'>Contact</h1>
-      <form id='contact-form' onSubmit={handleSubmit}>
-        <div className='input-container'>
+    <div id='contact' className={classes.contact}>
+      <h1 className={classes.title}>Contact</h1>
+      <form onSubmit={handleSubmit}>
+        <div className={classes.inputContainer}>
           <input
+            required
             type='text'
             name='name'
-            id='name-input'
-            placeholder='Name'
             aria-label='Name'
-            value={data.name}
+            placeholder='Name'
+            value={fields.name}
             onChange={handleChange}
-            required
           />
           <input
+            required
             type='text'
             name='email'
-            id='email-input'
-            placeholder='Email'
             aria-label='Email'
-            value={data.email}
+            placeholder='Email'
+            value={fields.email}
             onChange={handleChange}
-            required
           />
         </div>
-        <div className='input-container'>
+        <div className={classes.inputContainer}>
           <textarea
-            placeholder='Message'
-            name='message'
-            id='message-input'
-            aria-label='Message'
-            value={data.message}
-            onChange={handleChange}
             required
+            name='message'
+            aria-label='Message'
+            placeholder='Message'
+            value={fields.message}
+            onChange={handleChange}
           />
         </div>
-        <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading} />
-        <p className={`error ${error ? '' : classes.hide}`}>Message has been sent.</p>
+        <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading || sent} />
+        {
+          sent
+            ? <p className={classes.message}>Message has been sent.</p>
+            : <p className={classes.error}>{error}</p>
+        }
       </form>
     </div>
   )

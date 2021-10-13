@@ -14,17 +14,17 @@ const Experience = () => {
           <h3>Languages</h3>
           <ul className={classes.innerList}>
             <li><FontAwesomeIcon icon={faCheck} />Javascript</li>
+            <li><FontAwesomeIcon icon={faCheck} />Python</li>
             <li><FontAwesomeIcon icon={faCheck} />PHP</li>
             <li><FontAwesomeIcon icon={faCheck} />C#</li>
-            <li><FontAwesomeIcon icon={faCheck} />Java</li>
           </ul>
         </li>
         <li className={classes.topic}>
           <h3>Frontend</h3>
           <ul className={classes.innerList}>
             <li><FontAwesomeIcon icon={faCheck} />React</li>
-            <li><FontAwesomeIcon icon={faCheck} />Vue JS</li>
             <li><FontAwesomeIcon icon={faCheck} />Sass</li>
+            <li><FontAwesomeIcon icon={faCheck} />Vue JS</li>
           </ul>
         </li>
         <li className={classes.topic}>
@@ -33,17 +33,16 @@ const Experience = () => {
             <li><FontAwesomeIcon icon={faCheck} />Express JS</li>
             <li><FontAwesomeIcon icon={faCheck} />Next JS</li>
             <li><FontAwesomeIcon icon={faCheck} />Laravel</li>
-            <li><FontAwesomeIcon icon={faCheck} />.NET</li>
+            <li><FontAwesomeIcon icon={faCheck} />GraphQL</li>
           </ul>
         </li>
         <li className={classes.topic}>
-          <h3>Misc</h3>
+          <h3>Other</h3>
           <ul className={classes.innerList}>
             <li><FontAwesomeIcon icon={faCheck} />Electron</li>
             <li><FontAwesomeIcon icon={faCheck} />React Native</li>
-            <li><FontAwesomeIcon icon={faCheck} />Sequelize JS</li>
+            <li><FontAwesomeIcon icon={faCheck} />AWS</li>
             <li><FontAwesomeIcon icon={faCheck} />PostgreSQL</li>
-            <li><FontAwesomeIcon icon={faCheck} />GraphQL</li>
           </ul>
         </li>
       </ul>

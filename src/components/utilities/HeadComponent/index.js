@@ -1,7 +1,5 @@
 import Head from 'next/head'
 
-console.log(process.env.RECAPTCHA_SITE_KEY)
-
 const HeadComponent = ({ title, description }) => {
   return (
     <Head>

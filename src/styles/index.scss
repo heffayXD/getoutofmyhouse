@@ -6,44 +6,4 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.row {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  .title {
-    text-align: center;
-    width: 100%;
-    font-size: 2.25rem;
-  }
-  .container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .card {
-    margin: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: $white;
-    color: $dark;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 800px;
-    width: 100%;
-    @include media(tablet) {
-      margin: 20px;
-    }
-  }
-  &.alt {
-    color: $white;
-    background-color: $dark;
-  }
-}
-
 .grecaptcha-badge { visibility: hidden; }

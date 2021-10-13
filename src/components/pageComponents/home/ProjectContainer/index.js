@@ -20,10 +20,7 @@ const ProjectContainer = props => {
 
   const getTechs = () => {
     return project.technologies.map((tech, index) => (
-      <li
-        className={classes.techItem}
-        key={`tech-item-${project.key}-${index}`}
-      >
+      <li className={classes.techItem} key={`tech-item-${project.key}-${index}`}>
         {tech}
       </li>
     ))

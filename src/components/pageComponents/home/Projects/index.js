@@ -19,8 +19,8 @@ const Projects = () => {
   }
 
   return (
-    <div className={`${classes.projects} row`} id='projects'>
-      <h1 className='title'>Projects</h1>
+    <div id='projects' className={classes.projects}>
+      <h1 className={classes.title}>Projects</h1>
       {getProjects()}
     </div>
   )

@@ -1,6 +1,8 @@
 const path = require('path')
 require('dotenv').config()
 
+console.log(process.env.RECAPTCHA_SITE_KEY)
+
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]

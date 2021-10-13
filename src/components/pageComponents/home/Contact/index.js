@@ -67,6 +67,7 @@ const Contact = () => {
             onChange={handleChange}
           />
         </div>
+
         <input type='submit' value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')} disabled={loading || sent} />
         <p className={classes.recaptcha}>This site is protected by reCAPTCHA and the Google <a href='https://policies.google.com/privacy' target='_blank' rel='noreferrer nofollow'>Privacy Policy</a> and <a href='https://policies.google.com/terms' target='_blank' rel='noreferrer nofollow'>Terms of Service</a> apply.</p>
         {

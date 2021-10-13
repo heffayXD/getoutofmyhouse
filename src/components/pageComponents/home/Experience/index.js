@@ -6,7 +6,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const Experience = () => {
   return (
-    <div className={`${classes.experience} row alt`}>
+    <div id='experience' className={classes.experience}>
       <h1 className={classes.title}>Experience</h1>
       <Icons />
       <ul className={classes.topicList}>
